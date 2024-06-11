@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0; url=https://wa.me/5527997922687?text=Oi%2C%20estou%20interessado!">
+    <title>Redirecionamento Automático para WhatsApp</title>
+</head>
+<body>
+    <script>
+        window.onload = function() {
+            var base_url = "https://wa.me/5527997922687";
+            var message = "Olá, estou entrando em contato através do anúncio visto no WhatsApp e gostaria de obter mais informações";
+            var encodedMessage = encodeURIComponent(message);
+            var full_url = base_url + "?text=" + encodedMessage;
+
+            window.location.href = full_url;
+        };
+    </script>
+    <p>Se você não foi redirecionado, <a href="https://wa.me/5527997922687?text=Oi%2C%20estou%20interessado!">clique aqui</a>.</p>
+</body>
+</html>
