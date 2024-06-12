@@ -1,21 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=https://wa.me/5527997922687?text=Oi%2C%20estou%20interessado!">
-    <title>Redirecionamento Automático para WhatsApp</title>
+<meta charset="UTF-8">
+<title>Redirecionando</title>
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        color: #333;
+    }
+    .container {
+        text-align: center;
+        padding: 20px;
+        border: 3px solid #4CAF50;
+        border-radius: 10px;
+        background: white;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+        font-size: 24px;
+        color: #4CAF50;
+    }
+    .loading {
+        border: 5px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 5px solid #3498db;
+        width: 40px;
+        height: 40px;
+        -webkit-animation: spin 1s linear infinite; /* Safari */
+        animation: spin 1s linear infinite;
+    }
+    /* Safari */
+    @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+    }
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+</style>
+<script>
+    window.onload = function() {
+        var base_url = "https://wa.me/5527997922687";
+        var message = "Olá, estou entrando em contato através do anúncio visto no WhatsApp e gostaria de obter mais informações";
+        var encodedMessage = encodeURIComponent(message);
+        var full_url = base_url + "?text=" + encodedMessage;
+
+        window.location.href = full_url;
+    };
+</script>
 </head>
 <body>
-    <script>
-        window.onload = function() {
-            var base_url = "https://wa.me/5527997922687";
-            var message = "Olá, estou entrando em contato através do anúncio visto no WhatsApp e gostaria de obter mais informações";
-            var encodedMessage = encodeURIComponent(message);
-            var full_url = base_url + "?text=" + encodedMessage;
-
-            window.location.href = full_url;
-        };
-    </script>
-    <p>Se você não foi redirecionado, <a href="https://wa.me/5527997922687?text=Oi%2C%20estou%20interessado!">clique aqui</a>.</p>
+    <div class="container">
+        <h1>Redirecionando você para nosso atendentes...</h1>
+        <div class="loading"></div>
+    </div>
 </body>
 </html>
